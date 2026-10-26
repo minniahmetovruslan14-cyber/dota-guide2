@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dota 2 — гайд для девушек-новичков</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Контейнер для летающих сердечек -->
+  <div class="hearts-container" id="hearts"></div>
+
+  <header class="header" id="header">
+    <div class="logo">🐱 САЙТ<span>-ГИД</span> 🌸</div>
+    <nav class="nav">
+      <a href="#heroes" class="nav-link">Герои</a>
+      <a href="#glossary" class="nav-link">Терминология</a>
+      <a href="#tips" class="nav-link">Советы</a>
+      <a href="#guides" class="nav-link">Гайды</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Введение -->
+    <section class="hero-section" id="home">
+      <h1 class="fade-in">Dota 2 для девушек-новичков 🎀</h1>
+      <p class="lead fade-in">
+        Dota 2 — это командная MOBA-игра, где две команды по 5 человек сражаются за базу противника. 
+        Порог входа высокий: сотни героев, предметы и термины. Вам предстоит научиться фармить золото, 
+        понимать роли (керри, саппорт, оффлейнер), контролировать карту и работать в команде. 
+        Этот гайд поможет вам начать без паники, разобраться в базовых механиках, выучить основные термины 
+        и, главное, получать удовольствие от игры! 🐾
+      </p>
+      <a href="#heroes" class="btn fade-in">Смотреть героев 💖</a>
+    </section>
+
+    <!-- Карточки героев и фильтры -->
+    <section class="heroes-section" id="heroes">
+      <div class="heroes-header">
+        <h2>Простые герои для старта 🐈</h2>
+        <!-- Сюда скрипт вставит панель фильтров -->
+      </div>
+      <div class="cards" id="cards"></div>
+    </section>
+
+    <!-- Словарь терминов -->
+    <section class="glossary-section" id="glossary">
+      <h2>Словарь терминов 📖</h2>
+      <div class="glossary" id="glossary-list"></div>
+    </section>
+
+    <!-- Советы -->
+    <section class="tips-section" id="tips">
+      <h2>Советы и психология 🌸</h2>
+      <div class="tips-grid">
+        <div class="tip-card">
+          <h3>🐱 Как бороться с токсичностью</h3>
+          <p>Мгновенный мут при первом оскорблении. Отключите голосовой чат с незнакомыми. Помните: токсичность обычно про их жизнь, а не про вас. Не вступайте в спор — молчание работает лучше.</p>
+        </div>
+        <div class="tip-card">
+          <h3>🐾 Как побороть страх</h3>
+          <p>Ошибки — это нормально. Даже про-игроки промахиваются. Играйте с друзьями или в стаке. Ставьте реалистичные цели: отработать одного героя или не умирать до 10 минут.</p>
+        </div>
+        <div class="tip-card">
+          <h3>🎀 Как не совершать ошибки</h3>
+          <p>Смотрите на мини-карту каждые 5 секунд. Если врагов не видно — они идут вас убивать. Делайте паузы 5–10 минут после сложного матча, чтобы сбросить тильт.</p>
+        </div>
+      </div>
+    </section>
+    <!-- Гайды (Видео) -->
+    <section class="guides-section" id="guides">
+      <h2>Видео-гайды 🎬</h2>
+      <div class="video-grid">
+        
+        <!-- ГАЙД 1 -->
+        <div class="video-card">
+          <h3 class="video-title">Заголовок первого гайда</h3>
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/ТВОЙ_КОД_ВИДЕО" allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <!-- ГАЙД 2 -->
+        <div class="video-card">
+          <h3 class="video-title">Заголовок второго гайда</h3>
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/ТВОЙ_КОД_ВИДЕО" allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <!-- ГАЙД 3 -->
+        <div class="video-card">
+          <h3 class="video-title">Заголовок третьего гайда</h3>
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/ТВОЙ_КОД_ВИДЕО" allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <!-- ГАЙД 4 -->
+        <div class="video-card">
+          <h3 class="video-title">Заголовок четвертого гайда</h3>
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/ТВОЙ_КОД_ВИДЕО" allowfullscreen></iframe>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  <footer class="footer">
+    <p>Сделано с любовью 🐱💖🌸</p>
+    <p>Гайд создан для развлечения и быстрого старта. Dota 2 — игра сложная, но весёлая.</p>
+  </footer>
+
+  <script src="app.js"></script>
+  <!-- Скрипт для летающих сердечек -->
+  <script>
+    const heartsContainer = document.getElementById('hearts');
+    const heartSymbols = ['💖', '🌸', '🐱', '🐾', '🎀', '✨', '💕'];
+    
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.innerText = heartSymbols[Math.floor(Math.random() * heartSymbols.length)];
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = Math.random() * 3 + 4 + 's'; // от 4 до 7 секунд
+      heart.style.fontSize = Math.random() * 20 + 15 + 'px';
+      
+      heartsContainer.appendChild(heart);
+      
+      setTimeout(() => {
+        heart.remove();
+      }, 7000);
+    }
+    
+    setInterval(createHeart, 300); // Создаем сердечко каждые 300мс
+  </script>
+</body>
+</html>
